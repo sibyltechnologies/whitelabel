@@ -1,0 +1,13 @@
+/* v16+: navbar/help markup changed across themes; hide help entry robustly */
+.dropdown-help,
+li.dropdown-help,
+li.dropdown.dropdown-help,
+.navbar .dropdown-help,
+.navbar [aria-label="Help"],
+.navbar [data-label="Help"],
+.navbar [data-name="help"],
+.navbar [href*="help"],
+.navbar [href*="knowledge_base"]
+{
+    display: none !important;
+}
