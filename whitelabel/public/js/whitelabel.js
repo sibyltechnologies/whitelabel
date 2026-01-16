@@ -31,6 +31,25 @@
     });
   }
 
+  function hideUserMenu() {
+    // Hard-hide the Desk user menu (avatar dropdown in upper-right)
+    const selector = [
+      ".dropdown-navbar-user",
+      "li.dropdown-navbar-user",
+      "li.dropdown.dropdown-navbar-user",
+      ".navbar [data-name='user']",
+      ".navbar [data-name='user-menu']",
+      ".navbar [data-name='user-dropdown']",
+      ".navbar [aria-label='User']",
+      ".navbar .avatar"
+    ].join(",");
+
+    document.querySelectorAll(selector).forEach((el) => {
+      const container = el.closest("li, .dropdown, .nav-item, .navbar-item") || el;
+      container.style.setProperty("display", "none", "important");
+    });
+  }
+
   function insertCustomTitle(s) {
     if (!(s.custom_navbar_title && s.custom_navbar_title_style)) return;
 
@@ -56,6 +75,7 @@
   function apply() {
     const s = getSettings();
     setHelpVisibility(s);
+    hideUserMenu();
     setLogoSize(s);
     setNavbarBg(s);
     insertCustomTitle(s);

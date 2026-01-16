@@ -28,7 +28,8 @@ class WhitelabelSetting(Document):
 			if "erpnext" in frappe.get_installed_apps():
 				system_settings_doc.app_name = "ERPNext"
 			else:
-				system_settings_doc.app_name = "Frappe"
+				# Default brand name for non-ERPNext distributions
+				system_settings_doc.app_name = "Sibyl"
 
 	def set_theme_attr(self,navbar_settings_doc,website_doc):
 		if self.application_logo:

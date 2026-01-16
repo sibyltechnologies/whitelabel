@@ -11,3 +11,17 @@ li.dropdown.dropdown-help,
 {
     display: none !important;
 }
+
+/* v16+: hide the user menu (avatar dropdown) in the upper-right of Desk */
+.dropdown-navbar-user,
+li.dropdown-navbar-user,
+li.dropdown.dropdown-navbar-user,
+.navbar .dropdown-navbar-user,
+.navbar [data-name="user"],
+.navbar [data-name="user-menu"],
+.navbar [data-name="user-dropdown"],
+.navbar [aria-label="User"],
+.navbar .avatar
+{
+    display: none !important;
+}

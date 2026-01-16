@@ -1,17 +1,6 @@
-*.pyc
-__pycache__/
-*.log
 .DS_Store
-
-# Node / front-end artifacts (if your app has them)
-node_modules/
-dist/
-build/
-
-# Editor / tooling
-.vscode/
-.idea/
-
-# Python tooling
-.env
-.venv
+*.pyc
+*.egg-info
+*.swp
+tags
+whitelabel/docs/current
