@@ -34,3 +34,10 @@ li.dropdown.dropdown-navbar-user,
     visibility: hidden !important;
     pointer-events: none !important;
 }
+
+
+.desktop-avatar {
+        display: none !Imnportant;
+        visibility: hidden !Important;
+        pointer-events: none !Important;
+}
