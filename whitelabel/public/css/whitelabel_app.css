@@ -25,3 +25,12 @@ li.dropdown.dropdown-navbar-user,
 {
     display: none !important;
 }
+
+/* Hide Desktop user avatar menu (Frappe v16) */
+.desktop-avatar,
+.navbar .desktop-avatar,
+.layout-side-section .desktop-avatar {
+    display: none !important;
+    visibility: hidden !important;
+    pointer-events: none !important;
+}

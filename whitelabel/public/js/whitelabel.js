@@ -90,3 +90,31 @@
     afterAjax(apply);
   });
 })();
+
+frappe.ready(() => {
+    const hideAvatar = () => {
+        document.querySelectorAll('.desktop-avatar').forEach(el => {
+            el.style.display = 'none';
+        });
+    };
+
+    hideAvatar();
+
+    // Re-apply on SPA navigation / async render
+    const observer = new MutationObserver(hideAvatar);
+    observer.observe(document.body, { childList: true, subtree: true });
+});
+
+frappe.ready(() => {
+    const replaceFrappeText = () => {
+        document.body.innerHTML = document.body.innerHTML.replace(
+            /\bFrappe\b/g,
+            'Sibyl'
+        );
+    };
+
+    replaceFrappeText();
+
+    const observer = new MutationObserver(replaceFrappeText);
+    observer.observe(document.body, { childList: true, subtree: true });
+});
